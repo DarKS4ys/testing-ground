@@ -24,7 +24,7 @@ const Founders = [
   {
     name: 'ScholarMindset',
     image: '/scholar.jpg',
-    description: 'Shortform Content & SEO Expert',
+    description: 'Shortform Content Expert',
     href: 'https://www.youtube.com/@ScholarMindset',
   },
   {
@@ -46,20 +46,19 @@ export default function Home() {
         {Founders.slice(0, 4).map((founder) => (
           <div
             key={founder.name}
-            className="w-82 text-center justify-center items-center flex flex-col bg-slate-800/20 border border-white/25 rounded-xl p-4 px-8 m-4"
+            className="w-80 text-center justify-center items-center flex flex-col bg-slate-800/20 border border-white/25 rounded-xl p-4 px-8 m-4"
           >
             <div className="items-center justify-center">
-              <div className="font-semibold tracking-wide text-xl">
-                {founder.name}
-              </div>
+              <div className="font-semibold  text-lg">{founder.name}</div>
+
               <div className="relative flex justify-center items-center m-6">
                 <Link href={founder.href}>
                   <Image
                     className="rounded-full"
                     src={founder.image}
-                    width={150}
-                    height={150}
-                    alt="Scholar"
+                    width={175}
+                    height={175}
+                    alt="Founders"
                   />
                   <div
                     className="absolute top-0 left-0 w-full h-full rounded-full flex justify-center transition-all items-center opacity-0 hover:opacity-100"
@@ -76,7 +75,7 @@ export default function Home() {
       </div>
       <div className="flex justify-center items-center mt-4 flex-col mb-32">
         <div className="bg-slate-800/20 border border-white/25 rounded-xl p-6 px-8 m-4 flex flex-col text-center w-82">
-          <div className="font-semibold tracking-wide text-xl">
+          <div className="font-semibold tracking-wide text-xl max-w-full">
             {Founders[4].name}
           </div>
           <div className="relative w-150 h-150 flex justify-center items-center m-6">
